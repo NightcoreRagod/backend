@@ -5,4 +5,4 @@ import process from 'process';
 config();
 
 // Export the port with 5500 as the fallback if not defined in .env
-export const PORT = process.env.PORT || 5500;
+export const {PORT, NODE_ENV, DB_URI} = process.env;
