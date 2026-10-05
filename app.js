@@ -20,8 +20,10 @@ app.get('/', (req, res) => {
 });
 
 // Fix 2: Changed to positional arguments for app.listen
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`Server is running on port http://localhost:${PORT}`);
+
+    await connectToDatabase()
 });
 
 export default app;
